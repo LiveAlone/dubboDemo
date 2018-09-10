@@ -11,10 +11,8 @@ import org.yqj.dubbo.demo.api.DemoService;
 @Component
 public class DemoServiceWrapper {
 
-//    @Reference(version = "1.0.0",
-//            application = "${dubbo.application.id}",
-//            url = "dubbo://127.0.0.1:12345")
-    @Reference(url = "dubbo://127.0.0.1:20880")
+//    @Reference(url = "dubbo://127.0.0.1:20880")
+    @Reference
     private DemoService demoService;
 
     public String sayHelloWrapper(String name){

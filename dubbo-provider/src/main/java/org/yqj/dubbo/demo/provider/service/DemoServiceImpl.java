@@ -12,7 +12,7 @@ import java.util.Date;
 /**
  * @author yaoqijun on 2018-01-31.
  */
-@Service(interfaceClass = DemoService.class)
+@Service
 @Component
 public class DemoServiceImpl implements DemoService {
     @Override
