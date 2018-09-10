@@ -1,9 +1,18 @@
 # DubboBasicDemo
 
-> 通过 spring boot dubbo 方式启动 dubbo
+> fuck 版本好混乱， 我擦
 
-> 查看 dubbo  的设计方式， 各个模块的功能匹配方式等
+apache 下，提供 dubbo-spring-boot-starter 版本号
+https://github.com/apache/incubator-dubbo-spring-boot-project
+<dependency>
+    <groupId>com.alibaba.boot</groupId>
+    <artifactId>dubbo-spring-boot-starter</artifactId>
+    <version>0.2.0</version>
+</dependency>
+当前0.2.0版本
 
+alibaba github 下 dubbo-spring-boot 项目提供
+https://github.com/alibaba/dubbo-spring-boot-starter
 ```
  <dependency>
         <groupId>com.alibaba.spring.boot</groupId>
@@ -21,10 +30,3 @@
 </dependency>
 ```
 
-1 版本依赖解决
-
-2 what fuck 
-
-上次看 dubbo-spring-boot-starter 还是前0.1.0 版本的
-
-这次再看 2.0.0, 配置命名格式乱修改， 醉了.
