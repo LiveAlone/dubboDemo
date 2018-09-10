@@ -11,7 +11,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
-        <spring.boot.version>1.5.10.RELEASE</spring.boot.version>
+        <spring.boot.version>1.5.9.RELEASE</spring.boot.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <dubbo.version>2.6.0</dubbo.version>
@@ -27,7 +27,6 @@
 
     <dependencyManagement>
         <dependencies>
-
             <!-- https://mvnrepository.com/artifact/redis.clients/jedis -->
             <dependency>
                 <groupId>redis.clients</groupId>
@@ -40,12 +39,6 @@
                 <artifactId>dubbo-spring-boot-starter</artifactId>
                 <version>${dubbo.spring.boot.version}</version>
             </dependency>
-
-            <!--<dependency>-->
-                <!--<groupId>com.alibaba</groupId>-->
-                <!--<artifactId>dubbo</artifactId>-->
-                <!--<version>${dubbo.version}</version>-->
-            <!--</dependency>-->
 
             <dependency>
                 <groupId>org.springframework.boot</groupId>

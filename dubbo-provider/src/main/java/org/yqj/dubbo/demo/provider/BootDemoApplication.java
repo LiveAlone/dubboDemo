@@ -1,5 +1,6 @@
 package org.yqj.dubbo.demo.provider;
 
+import com.alibaba.dubbo.spring.boot.annotation.EnableDubboConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 
@@ -10,6 +11,7 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
  * Descirbe:
  */
 @SpringBootApplication
+@EnableDubboConfiguration
 public class BootDemoApplication {
     public static void main(String[] args) {
         new SpringApplicationBuilder()

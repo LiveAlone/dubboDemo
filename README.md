@@ -20,3 +20,11 @@
     <version>1.5.10.RELEASE</version>
 </dependency>
 ```
+
+1 版本依赖解决
+
+2 what fuck 
+
+上次看 dubbo-spring-boot-starter 还是前0.1.0 版本的
+
+这次再看 2.0.0, 配置命名格式乱修改， 醉了.

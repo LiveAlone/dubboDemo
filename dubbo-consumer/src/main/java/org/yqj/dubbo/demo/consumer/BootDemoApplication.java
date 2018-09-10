@@ -1,5 +1,6 @@
 package org.yqj.dubbo.demo.consumer;
 
+import com.alibaba.dubbo.spring.boot.annotation.EnableDubboConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.http.MediaType;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * Descirbe:
  */
 @SpringBootApplication
+@EnableDubboConfiguration
 public class BootDemoApplication {
     public static void main(String[] args) {
         new SpringApplicationBuilder()
