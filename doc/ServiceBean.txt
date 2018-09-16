@@ -1,0 +1,30 @@
+ServiceBean 服务 Bean 的提供方式
+
+1 bean 获取配置方式
+	支持配置 ApplicationConfig, ModuleConfig, RegistryConfig, ProtocolConfig, MonitorConfig, ProviderConfig 服务 Bean 支持不同的配置方式
+	设置 bean, export 导出对应的 端口支持。
+
+2 protocol url 方式导出过程
+	1 filter invoke 执行流程 过滤调用方式, 最外层分装， 对于 origin filter 方式
+		EchoFilter 
+		ClassLoaderFilter
+		GenericFilter 通用接口函数 过滤方式
+		ContextFilter threadLocal 线程方式， 执行本地 RpcContext 上下文方式
+		TraceFilter trace channel result 结果输出方式
+		TimeoutFilter 超时， 不是超时立即返回， 调用完成， 计算时间差返回
+		MonitorFilter 支持 monitor 返回过滤监控模块
+		ExceptionFilter	invoker exception 结果过滤封装方式
+
+	2 DubboProtocol 
+		DubboExporter 常见支持 Exporter 导出方式
+		通过 key ip:port 方式， serverMap 维护对应 key:ip:port, value:ExchangeServer 方式
+		Exchangers 绑定对应的 Handler, ！！ Handler, 是通用类型， 屏蔽了 底层 Netty Mina 等实现方式
+			通过 ExportMap 方式， 获取对应的 key , invoker 方式， 执行调用方式。
+			Exchange 支持对应的 timeout, lazy connect 等方式
+
+	3 ChannelHandler 对 channel 处理方式支持， 对connect， sent, received 等 消息的监听
+
+	4 transports 支持不同类型的, 数据交互服务方式
+		Netty mina 不同数据服务的交互方式
+
+完成服务的通讯方式
