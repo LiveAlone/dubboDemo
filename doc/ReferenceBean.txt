@@ -1,0 +1,50 @@
+Reference Bean bean 远程调用请求
+
+1 通过 BeanPostProcessor 方式， 对 ReferenceBean 的初始化
+	获取 ReferenceBean， 获取对应的注解信息， 
+	初始化注解的配置模块信息
+		application module, registry, protocol, monitors, provider, consumer 
+	创建 ReferenceBean, 初始化 Config Modules 配置信息
+
+2 双重校验方式， 获取 ReferenceBean， 判断是否已经初始化.
+	获取 Reference Bean, 获取 Bean 初始化对象
+
+3 通过 getObject 方式，获取 object proxy 对象，
+	通过 ReferenceBean 的 init 初始化过程。
+
+4 config 初始化 invoker 对 invoker 分装 bean, 调用执行 对应的 处理方法
+	
+	RegistryProtocol 获取 RedisRegistry 通过配置中心 获取对应的注册中心
+
+	初始化 RegistryDirectory， 通过目录结构 维护 service reference， 服务的调用， object 引用方式
+
+	注册 consumer， 用于监控对应的消费者， 监控对应的 Registry目录，监听对应的事件消息
+		XXX 不同的Registry， 用于注册， 同时 用于监听 注册中心的变化， 及时的通知更新对应的集群中心。
+		RegsitryDirectoy 同时 是一个 NotifiedListener 监听对应的服务变化
+
+	registryDirectory 获取 protocol, catagory 对应目录信息
+		directory 初始化对应的， 可以远程调用的 
+
+	toInvoker 通过Registry 生成对应的 Invoker 执行信息
+		通过 DubboProtocol 方式， 初始化创建对应的 InvokerClient, 获取长连接的 Exchange， netty client 提供远程调用方式， DubboInvoer 通过轮询的调用方式， 执行远程调用， 获取 result
+
+	添加 ConsumeSubscribeListener 监听销毁的 bean
+	添加 Filter 
+		ConsumerContextFilter context invoke 执行
+		FutureFilter	异步执行
+		MonitorFilter	执行监控数据的初始化
+
+	dircetory 
+		提供 FailoverInvoker 集群 Rpc 提供对应的 失败策略。
+
+	返回对应的 Invoker , 对应的 Invoker封装对应的 ProxyFactory;
+
+
+
+bean 结构
+	ProxyFactory -> ClusterInvoker 对应封装 -> RegistryDirectory 封装目录 -> dubboProtocol Exchange 封装拦截方式。 远程调用方式
+
+
+
+
+
