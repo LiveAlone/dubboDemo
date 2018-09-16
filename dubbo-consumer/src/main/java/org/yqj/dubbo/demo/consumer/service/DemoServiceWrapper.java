@@ -11,7 +11,6 @@ import org.yqj.dubbo.demo.api.DemoService;
 @Component
 public class DemoServiceWrapper {
 
-//    @Reference(url = "dubbo://127.0.0.1:20880")
     @Reference
     private DemoService demoService;
 
