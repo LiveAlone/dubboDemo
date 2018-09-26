@@ -7,8 +7,8 @@ import org.yqj.dubbo.demo.api.StudentInfoService;
 /**
  * @author yaoqijun on 2018-06-08.
  */
-@Service
-@Component
+//@Service
+//@Component
 public class StudentInfoServiceImpl implements StudentInfoService {
     @Override
     public String gainStudentInfo(Long id) {

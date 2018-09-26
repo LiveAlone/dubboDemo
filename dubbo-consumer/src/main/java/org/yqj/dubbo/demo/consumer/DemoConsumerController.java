@@ -35,6 +35,11 @@ public class DemoConsumerController {
     @Autowired
     private DemoServiceWrapper demoServiceWrapper;
 
+    @RequestMapping("/sayHelloWithFail")
+    public String sayHelloWithRetry(@RequestParam String name){
+        return demoServiceWrapper.sayHelloWithFirstFail(name);
+    }
+
     @RequestMapping("/sayHello")
     public String sayHello(@RequestParam String name) {
         return demoServiceWrapper.sayHelloWrapper(name);

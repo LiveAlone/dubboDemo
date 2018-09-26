@@ -18,8 +18,14 @@ package org.yqj.dubbo.demo.api;
 
 public interface DemoService {
 
+    /**
+     * say hello 50 的概率造成失败执行
+     * @param name
+     * @return
+     */
+    String sayHelloWith50RateFail(String name);
+
     String sayHello(String name);
 
     String sayHelloAgain(String name);
-
 }
