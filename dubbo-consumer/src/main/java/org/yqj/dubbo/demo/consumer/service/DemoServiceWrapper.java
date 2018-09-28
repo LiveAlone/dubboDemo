@@ -12,7 +12,7 @@ import org.yqj.dubbo.demo.api.DemoService;
 @Component
 public class DemoServiceWrapper {
 
-    @Reference(retries = 3)
+    @Reference(version = "1.0.0")
     private DemoService demoService;
 
     public String sayHelloWithFirstFail(String name){
