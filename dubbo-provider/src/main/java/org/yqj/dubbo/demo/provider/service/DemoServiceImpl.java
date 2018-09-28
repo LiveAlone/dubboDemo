@@ -14,7 +14,7 @@ import java.util.concurrent.ThreadLocalRandom;
 /**
  * @author yaoqijun on 2018-01-31.
  */
-@Service
+@Service(version = "1.0.0")
 @Component
 @Slf4j
 public class DemoServiceImpl implements DemoService {
