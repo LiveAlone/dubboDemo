@@ -29,7 +29,7 @@ import org.yqj.dubbo.demo.consumer.service.DemoServiceWrapper;
  * @see
  * @since 1.0.0
  */
-@RestController
+@RestController("consumer_controller")
 public class DemoConsumerController {
 
     @Autowired
